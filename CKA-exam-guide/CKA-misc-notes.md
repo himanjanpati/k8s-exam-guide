@@ -96,8 +96,13 @@ pod=frontend
 Liveness and Readiness probes
 probes to health check 
 
-adding liveness probe will check the health status of the pod in each interval of initialdelayseconds
+adding liveness probe will check the health status of the pod after the initialdelayseconds
 It will keep on restarting till it gets 200 status code response if the liveness probe fails
+
+default value for initialDelaySeconds: 0, min value: 0
+
+periodSeconds: How often (in seconds) to perform the probe. 
+Default to 10 seconds. Minimum value is 1.
 
 ```
 livenessProbe:
@@ -105,7 +110,18 @@ livenessProbe:
     path: /
     port: 80
 initialDelaySeconds: 30
+periodSeconds: 20
+```
+adding readiness probe will check the health status of the pod in each interval of initialdelayseconds and will not make the status of the pod to ready until the check is passed
+```
+readinessProbe:
+  httpGet:
+    path: /
+    port: 80
+initialDelaySeconds: 30
+periodSeconds: 15
 ```
 
+Note - Liveness probe restarts the pod if the check fails where as readiness probe will not reastart the pod
 
 
