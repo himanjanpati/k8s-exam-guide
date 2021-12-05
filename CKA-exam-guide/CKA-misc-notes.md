@@ -124,4 +124,6 @@ periodSeconds: 15
 
 Note - Liveness probe restarts the pod if the check fails where as readiness probe will not reastart the pod
 
+HTTP probes:
+For an HTTP probe, the kubelet sends an HTTP request to the specified path and port to perform the check.
 
