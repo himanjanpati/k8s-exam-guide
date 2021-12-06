@@ -8,14 +8,14 @@ beginner info:</br>
        Name     Himanjan
        Age      29
        Location UK
-3- We can not use duplicate kyes
+3- We can not use duplicate kyes</br>
 4- used to store small chunks of data that requires faster r/w operation
 
 Installing ETCD as a service
 
 ** installing in ubuntu 18.04 or 20 lts
 
-1- Download the binary and extract
+1- Download the binary and etextract
    
 
     export RELEASE=3.5.1
