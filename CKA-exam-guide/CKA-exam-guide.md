@@ -11,7 +11,7 @@ beginner info:</br>
 3- We can not use duplicate kyes</br>
 4- used to store small chunks of data that requires faster r/w operation
 
-Installing ETCD as a service
+<i>Installing ETCD as a service</i>
 
 ** installing in ubuntu 18.04 or 20 lts
 
