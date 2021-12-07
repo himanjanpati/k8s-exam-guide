@@ -77,17 +77,13 @@
     etcdctl member list
     8e9e05c52164694d, started, d0d184b989e71cb2951e97e4f9d12bba, http://localhost:2380, http://localhost:2379, false
 
-Advance info:
-1- ETCD acts as main central memory for k8s cluster, stores information on all the k8s objects (deployments, nodes, pods, services etc.)
-
-2- kubectl get command retieves the information from ETCD server
-
-3- Creating PODs, adding nodes gets updated in the ETCD database and a successful update result in change to complete 
-
-4- --advertise-client-urls https://${internal_ip}:2379 address where ETCD listens in k8s cluster. This URL is configured in kube-apiserver so that it can connect to ETCD
-
-5- Using kubeadm tool ETCD will be deployed to k8s as a pod
-6- Below command will show the k8s objects (keys) stored in ETCD 
+<b>Advance info:</b></br>
+1- ETCD acts as main central memory for k8s cluster, stores information on all the k8s objects (deployments, nodes, pods, services etc.)</br> 
+2- kubectl get command retieves the information from ETCD server</br>
+3- Creating PODs, adding nodes gets updated in the ETCD database and a successful update result in change to complete</br> 
+4- --advertise-client-urls https://${internal_ip}:2379 address where ETCD listens in k8s cluster. This URL is configured in kube-apiserver so that it can connect to ETCD</br> 
+5- Using kubeadm tool ETCD will be deployed to k8s as a pod</br> 
+6- Below command will show the k8s objects (keys) stored in ETCD</br> 
    
    <b>The command has to be run in controlplane</b>
         
