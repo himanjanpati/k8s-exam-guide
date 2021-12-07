@@ -103,7 +103,7 @@
 
 8- In HA k8s cluster having multiple ETCD master nodes the --intial-cluster has to be set. This will ensure each ETCD nodes running master nodes can talk to each other.
 
-<b>k8s kubeadm installation: check the etcd.yaml of k8s manifets in controlplane node for the parameters specified for etcd</b>
+<b>k8s kubeadm installation: check the etcd.yaml of k8s manifets in controlplane node for the parameters specified for etcd or kubectl describe po <apiserver_pod_name> -n kube-system</b>
 
 
     cat /etc/kubernetes/manifests/etcd.yaml 
